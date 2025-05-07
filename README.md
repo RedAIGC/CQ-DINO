@@ -16,12 +16,14 @@ We propose CQ-DINO, a category query-based object detection framework for vast v
 - [Installation](#installation)
 - [Dataset](#dataset)
 - [Usage](#usage)
-- [Model](#model)
+  - [Train](#train)
+  - [Inference](#inference) 
 - [Citation](#Citation)
 
 ## Installation
+The recommended configuration is 8 A100 GPUs, with CUDA version 12.1. The other configurations in MMDetection should also work.
 
-Please follow the guide to install and set up of the mmdetection.
+Please follow the guide to install and set up of the mmdetection. 
 ```
 conda create --name openmmlab python=3.10.6 -y
 conda activate openmmlab
@@ -41,6 +43,8 @@ pip install -v -e .
 
 
 ## Dataset
+The dataset preparation is the same as the one in [mmgrounding](https://github.com/open-mmlab/mmdetection/blob/main/configs/mm_grounding_dino/dataset_prepare.md) of MMDetection, which you can refer to.
+
 ### V3Det
 
 Please download and prepare V3Det Dataset at [V3Det Homepage](https://v3det.openxlab.org.cn/) and [V3Det Github](https://github.com/V3Det/V3Det). After downloading and unzipping, place the dataset or create a symbolic link to it in the data/v3det directory, with the following directory structure:
@@ -118,8 +122,8 @@ CQ-DINO
 ```
 
 ## Usage
-Download the first stage parametres from [Google drive](https://drive.google.com/drive/folders/1LggcENXJ3OEfx2o-hIEMYwZYKfc_od1P?usp=sharing) in the directory [stage1](/stage1/).  
-Download the category embeddings from [Google drive](https://drive.google.com/drive/folders/1USmgokmPkMP7en6fZBLxitbJ4_vQ3Usw?usp=sharing).\
+* Download the first stage parametres from [Google drive](https://drive.google.com/drive/folders/1LggcENXJ3OEfx2o-hIEMYwZYKfc_od1P?usp=sharing) in the directory [stage1](/stage1/).  
+* Download the category embeddings from [Google drive](https://drive.google.com/drive/folders/1USmgokmPkMP7en6fZBLxitbJ4_vQ3Usw?usp=sharing).\
 The complete  structure is as follows:
 ``` text
 CQ-DINO
@@ -131,6 +135,16 @@ CQ-DINO
 │   ├── cqdino_swinl_v3det_stage1.pth
 ├── v3det_clip_embeddings.pth
 ├── coco_clip_embeddings.pth
+```
+* Download the BERT Base model from [Huggingface](https://huggingface.co/google-bert/bert-base-uncased) and replace the  `lang_model_name` in the config files. For example:
+```bash
+_base_ = [
+    '../_base_/datasets/coco_detection.py',
+    '../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py'
+]
+
+q2l_config_name = 'q2l_config.json'
+lang_model_name = '/home/huggingface_hub/models--google-bert--bert-base-uncased'
 ```
 
 ### Train
