@@ -2,8 +2,8 @@
   <h1 align="center"> CQ-DINO: Mitigating Gradient Dilution via Category Queries for Vast Vocabulary Object Detection</h1>
   <p align="center">
 <a href="https://sunzc-sunny.github.io/">Zhichao Sun</a>, Huazhang Hu, Yidong Ma, Gang Liu, Nemo Chen, Xu Tang, Yao Hu, Yongchao Xu</a>
+<h4 align="center"> Xiaohongshu Inc. &emsp;&emsp;&emsp; Wuhan university
   </p>
-  <h4 align="center"> Wuhan university;     Xiaohongshu Inc.
   <h3 align="center"><a href="https://arxiv.org/pdf/2503.18430">Paper</a>
   <!-- <div align="center"></div> -->
 </p>
@@ -116,8 +116,8 @@ CQ-DINO
 ```
 
 ## Usage
-Download the first stage parametres from [Google drive]() in the directory [stage1](/stage1/).  
-Download the category embeddings from [Google drive]().\
+Download the first stage parametres from [Google drive](https://drive.google.com/drive/folders/1LggcENXJ3OEfx2o-hIEMYwZYKfc_od1P?usp=sharing) in the directory [stage1](/stage1/).  
+Download the category embeddings from [Google drive](https://drive.google.com/drive/folders/1USmgokmPkMP7en6fZBLxitbJ4_vQ3Usw?usp=sharing).\
 The complete  structure is as follows:
 ``` text
 CQ-DINO
@@ -142,7 +142,7 @@ bash tools/dist_train.sh configs/cqdino/cqdino_tree_swinb22k_v3det.py  NUM_GPUs
 ```
 
 ### Inference
-Download the checkpoint from [Google drive]()
+Download the checkpoint from [Google drive](https://drive.google.com/drive/folders/1QzKk6k7qDEGHWT3uoHkv4geZ7nmOfP5o?usp=sharing).
 
 ```bash
 # single gpu
