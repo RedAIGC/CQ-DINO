@@ -26,6 +26,8 @@ Please follow the guide to install and set up of the mmdetection.
 conda create --name openmmlab python=3.10.6 -y
 conda activate openmmlab
 
+pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu121
+
 pip install -U openmim
 mim install mmengine
 mim install "mmcv==2.2.0"
