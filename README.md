@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center"> CQ-DINO: Mitigating Gradient Dilution via Category Queries for Vast Vocabulary Object Detection</h1>
   <p align="center">
-<a href="https://sunzc-sunny.github.io/">Zhichao Sun</a>, Huazhang Hu, Yidong Ma, Gang Liu, Nemo Chen, Xu Tang, Yao Hu, Yongchao Xu</a>
+<a href="https://sunzc-sunny.github.io/">Zhichao Sun</a>, <a href="https://github.com/HuazhangHu/">Huazhang Hu</a>, Yidong Ma, Gang Liu, Nemo Chen, Xu Tang, Yao Hu, Yongchao Xu
 <h4 align="center"> Xiaohongshu Inc. &emsp;&emsp;&emsp; Wuhan university
   </p>
   <h3 align="center"><a href="https://arxiv.org/pdf/2503.18430">Paper</a>
