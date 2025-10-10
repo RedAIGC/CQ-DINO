@@ -15,7 +15,7 @@
 
 ## Overview
 We propose CQ-DINO, a category query-based object detection framework for vast vocabulary object detection.
-<img width="100%" src="./fig/cqdino_intro.png" />
+<img width="100%" src="./fig/cqdino.png" />
 
 ## Table of Contents
 
