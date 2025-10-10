@@ -8,6 +8,11 @@
   <!-- <div align="center"></div> -->
 </p>
 
+## NeurIPS-2025
+![Official](https://img.shields.io/badge/Official-Yes-blue)
+![SOTA](https://img.shields.io/badge/State--of--the--art-Yes-blue)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 ## Overview
 We propose CQ-DINO, a category query-based object detection framework for vast vocabulary object detection.
 
